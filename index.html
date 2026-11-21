@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JUST ONE CENT</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0b;color:#eee;font-family:Arial,sans-serif;line-height:1.8}
+header{text-align:center;padding:35px 15px;border-bottom:1px solid #80652d}
+h1{color:#dfbd68;font-size:38px;letter-spacing:3px}
+.gold{color:#dfbd68}
+main{max-width:850px;margin:auto;padding:20px}
+section{background:#171717;border:1px solid #80652d;border-radius:15px;padding:25px;margin:20px 0}
+h2{color:#dfbd68}
+select{padding:12px;background:#171717;color:white;border:1px solid #dfbd68;border-radius:8px;font-size:16px}
+.percent{display:flex;gap:12px;flex-wrap:wrap}
+.percent div{flex:1;min-width:130px;text-align:center;padding:18px;background:#242018;border-radius:12px}
+.percent strong{font-size:36px;color:#dfbd68}
+.notice{color:#c9c1ae;font-size:14px}
+footer{text-align:center;padding:25px;color:#dfbd68}
+</style>
+</head>
+<body>
+<header>
+<h1>JUST ONE CENT</h1>
+<p class="gold" id="tagline">A Human Story. A Global Mission.</p>
+<select id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="ar">العربية</option>
+<option value="fr">Français</option>
+<option value="es">Español</option>
+</select>
+</header>
+<main>
+<section>
+<h2 id="storyTitle">My Story</h2>
+<p id="story1">I am an ordinary person who worked hard to build a livelihood. Together with a business partner, I helped build a project that represented years of effort.</p>
+<p id="story2">After a painful business loss, I lost an important source of income. Financial pressure affected my family and personal life, including the end of a 22-year marriage.</p>
+<p id="story3">I share my story with dignity and hope. I want to rebuild stability and turn a difficult experience into an opportunity to help others.</p>
+</section>
+<section>
+<h2 id="missionTitle">Our Mission</h2>
+<p id="mission">JUST ONE CENT is built on a simple belief: small acts of kindness can make a meaningful difference. Our long-term hope is to support people and families facing hardship.</p>
+<div class="percent">
+<div><strong>20%</strong><p id="personal">Proposed share for personal and family stability.</p></div>
+<div><strong>80%</strong><p id="help">Proposed share to help people in greatest need first.</p></div>
+</div>
+</section>
+<section>
+<h2 id="transTitle">Transparency First</h2>
+<p id="trans">Any future fundraising or distribution will only begin after applicable legal requirements and a safe, transparent process have been confirmed.</p>
+<p class="notice" id="notice">This is an information page only. No payments or donations are accepted through this website.</p>
+</section>
+</main>
+<footer>JUST ONE CENT © 2026</footer>
+<script>
+const translations={
+ar:{
+tag:"قصة إنسانية.. رسالة عالمية",
+st:"قصتي",
+s1:"أنا إنسان عادي اجتهدت في العمل لبناء مصدر رزق. وبالشراكة مع صديق في العمل، ساهمت في بناء مشروع كان ثمرة سنوات من الجهد.",
+s2:"بعد خسارة مؤلمة في العمل، فقدت مصدرًا مهمًا للدخل. أثرت الضغوط المالية في أسرتي وحياتي الشخصية، وانتهى زواج استمر 22 عامًا.",
+s3:"أشارك قصتي بكرامة وأمل. أريد استعادة الاستقرار وتحويل التجربة الصعبة إلى فرصة لمساعدة الآخرين.",
+mt:"رسالتنا",
+m:"تقوم JUST ONE CENT على فكرة بسيطة: الأعمال الطيبة الصغيرة يمكن أن تصنع فرقًا حقيقيًا. نأمل في مساعدة الأشخاص والأسر التي تمر بظروف صعبة.",
+p:"نسبة مقترحة لدعم الاستقرار الشخصي والأسري.",
+h:"نسبة مقترحة لمساعدة الأشد احتياجًا أولًا.",
+tt:"الشفافية أولًا",
+tr:"لن يبدأ أي جمع أو توزيع للأموال مستقبلًا إلا بعد التأكد من المتطلبات القانونية ووجود آلية آمنة وشفافة.",
+n:"هذه صفحة تعريفية فقط. لا تستقبل أي مدفوعات أو تبرعات."
+},
+fr:{
+tag:"Une histoire humaine. Une mission mondiale.",
+st:"Mon histoire",
+s1:"Je suis une personne ordinaire qui a travaillé dur pour construire ses moyens de subsistance.",
+s2:"Après une perte professionnelle douloureuse, j'ai perdu une source importante de revenus.",
+s3:"Je partage mon histoire avec dignité et espoir. Je souhaite retrouver la stabilité et aider les autres.",
+mt:"Notre mission",
+m:"JUST ONE CENT repose sur une idée simple : les petits gestes de bonté peuvent faire une différence.",
+p:"Part proposée pour la stabilité personnelle et familiale.",
+h:"Part proposée pour aider d'abord les personnes les plus démunies.",
+tt:"La transparence avant tout",
+tr:"Toute collecte future dépendra de la vérification des exigences légales et d'un processus sûr et transparent.",
+n:"Cette page est informative uniquement. Aucun paiement ni don n'est accepté."
+},
+es:{
+tag:"Una historia humana. Una misión global.",
+st:"Mi historia",
+s1:"Soy una persona común que trabajó duro para construir su sustento.",
+s2:"Después de una pérdida empresarial, perdí una fuente importante de ingresos.",
+s3:"Comparto mi historia con dignidad y esperanza. Quiero recuperar la estabilidad y ayudar a los demás.",
+mt:"Nuestra misión",
+m:"JUST ONE CENT cree que los pequeños actos de bondad pueden marcar una diferencia.",
+p:"Parte propuesta para la estabilidad personal y familiar.",
+h:"Parte propuesta para ayudar primero a quienes más lo necesitan.",
+tt:"Transparencia primero",
+tr:"Cualquier recaudación futura dependerá de confirmar los requisitos legales y un proceso seguro.",
+n:"Esta página es informativa. No acepta pagos ni donaciones."
+}
+};
+function changeLanguage(){
+const l=document.getElementById("language").value;
+const d=translations[l];
+if(!d){
+document.documentElement.dir="ltr";
+document.getElementById("tagline").textContent="A Human Story. A Global Mission.";
+document.getElementById("storyTitle").textContent="My Story";
+document.getElementById("missionTitle").textContent="Our Mission";
+document.getElementById("transTitle").textContent="Transparency First";
+return;
+}
+const ids={
+tagline:"tag",storyTitle:"st",story1:"s1",story2:"s2",story3:"s3",
+missionTitle:"mt",mission:"m",personal:"p",help:"h",
+transTitle:"tt",trans:"tr",notice:"n"
+};
+for(const id in ids){
+document.getElementById(id).textContent=d[ids[id]];
+}
+document.documentElement.dir=l==="ar"?"rtl":"ltr";
+document.documentElement.lang=l;
+}
+</script>
+</body>
+  </html>
+  
